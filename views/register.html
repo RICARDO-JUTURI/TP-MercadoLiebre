@@ -4,9 +4,73 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>REGISTRO</title>
 </head>
 <body>
+    <div class="contenedor">
+     <form action="/crea tu cuenta" method="post">
+
+        <div class="nombre">
+            <input class="input-style" type="text" name="usuario" placeholder="Nombre y Apellido">
+              <span class="error-message">debes ingresar tu Nombre y Apellido</span>
+          </div>
+
+          <div class="nombre-usuario">
+            <input class="input-style" type="text" name="usuario" placeholder="Nombre de usuari@">
+              <span class="error-message">debes ingresar tu Nombre de usuari@</span>
+          </div>
+<div>
+<H3>Fecha de nacimiento</H3>
+    <input type="date" name="fecha">
+</div>
+
+
+<div class="domicilio">
+    <input class="input-style" type="text" name="domicilio" placeholder="Domicilio">
+      <span class="error-message">debes ingresar tu Domicilio</span>
+  </div>
+
+
+
+        <input type="text" name="perfil de usuario">
+
+
+
+
+       <div>
+ <label>Categorias de interes:</label>
+ <select name="categarias">
+ <option value="Electro">Electro</option>
+ <option value="Moda">Moda</option>
+ <option value="Hogar">Hogar</option>
+ <option value="Jugueteria">Jugueteria</option>
+ <option value="vida sana">vida sana</option>
+ </select>
+</div>
+
+<div>
+    <label>Seleccionar una foto para el perfil:</label>
+<input type="file" name="avatar" accept=".jpg" multiple>
+</div>
+
+<div class="contraseña">
+    <input class="input-style" type="password" name="passworl" placeholder="Ingrese su contraseña"><!--  placeholder=texto de referencia -->
+      <span class="error-message">debes ingresar una contraseña</span>
+  </div>
+  
+  <div class="contraseña">
+    <input class="input-style" type="password" name="passworl" placeholder="Confirmar contraceña"><!--  placeholder=texto de referencia -->
+      <span class="error-message">debes confirmar la contraseña</span>
+  </div>
+
+       
+        <input type="email" name="email">
+        <input type="tel" name="telefono">
+        <input type="number" name="edad">
+    
+    </form> 
+</div>
+    
     
 </body>
 </html>
