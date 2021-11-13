@@ -1,0 +1,52 @@
+.contenedor-form{
+    width: 100%;
+   height: 550px;
+background-color: var(--gris-claro);
+display: flex;
+justify-content: center;
+align-items: center;
+}
+.contenedor-form .formm{
+    width: 56%;
+    height: 500px;
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color:var(--gris-claro);
+    padding-left: 5px;
+    border-radius: 5px;
+  
+   
+
+}
+
+input.input-style{
+    border-radius: 8px;
+    border: none;
+    width: 170px;
+    height: 25px;
+    padding-left: 5px;
+
+}
+ .fecha input{
+   border-radius: 8px;
+    border: none;
+    width: 170px;
+    height: 25px; 
+}
+
+.botones button{
+    width: 100px;
+    height: 30px;
+    border-radius: 8px;
+    box-shadow: 2px 2px 2px 2px rgb(54, 54, 67);
+}
+.boton-color{
+    background-color: white;
+    color: black;
+
+}
+.boton-color:hover{
+    background-color: #0022AA;
+    color: white;
+}

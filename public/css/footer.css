@@ -32,3 +32,33 @@ footer .copy {
     font-size: var(--paragraph);
     margin: 0 0 10px 15px;
 }
+
+footer {
+    background-color: white;
+}
+
+.footerflex{
+    display: flex;  
+    background: white; 
+}
+
+.footerflex .footer-article{
+    text-align: center;
+    margin: 40px;
+}
+
+.footerflex .footer-article i{
+    font-size: 32px;
+    color: blue;
+    margin-bottom: 15px;
+}
+
+.footerflex .footer-article p{
+    font-size: 15px;
+    width: 75%;
+    margin: 0 auto;
+}
+
+footer i:hover {
+    background-color: rgb(255, 251, 0);
+}

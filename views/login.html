@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login</title>
+    <link rel="stylesheet" href="css/estilo.css">
+</head>
+<body>
+    <header>
+        <div class="horizon">
+        <div class="logo"><img src="images/logo-mercado-liebre.svg" class="logo__img">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos, marcas">
+        
+        <button class="boton"><i class="fas fa-search"></i></button>
+    </div>
+            <p class="quota"><i class="fas fa-hand-holding-usd"></i>Compra en cuotas y sin tarjeta de crédito</p>
+        </div>
+
+        <div class="horizon2">
+            <nav>
+            <ul id="top-list">
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            <ul>
+                <li><a href="">Crea tu cuenta</a> <i class="far fa-address-card"></i></li>
+                <li><a href="#">Ingresa</a> <i class="fas fa-sign-in-alt"></i></li>
+                <li><a href="#">Mis compras</a> <i class="fas fa-shopping-basket"></i></li>
+            </ul>
+        </nav>
+    </div>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    
+    <div class="form-container">
+        
+        
+        <form class="caja-login" action="">
+            
+            <div class="form">
+                <h2>Login</h2>
+
+                <div class="input-container">
+                  <input class="input-style" type="text" name="usuario" placeholder="nombre de usuario">
+                    <span class="error-message">debes ingresar tu usuario</span>
+                </div>
+
+                <div class="input-container">
+                    <input class="input-style" type="password" name="passworl" placeholder="ingrese su contraseña">
+                      <span class="error-message">debes ingresar una contraseña</span>
+                  </div>
+
+                  
+                    <div class="check">
+                        <label for="terms">acepto los  <a href="">terminos y condiciones</a></label>
+<input type="checkbox" name="terms" id="terms">
+<span class="error-message"> debes aceptar los terminos y condiciones</span>
+ </div>
+<span class="error-message">hubo errores en el envío</span>
+
+
+<button  type="submit" class="btn">enviar</button>
+
+                    </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

@@ -1,41 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>REGISTRO</title>
+   <link rel="stylesheet" href="css/estilo.css">
 </head>
 <body>
-    <div class="contenedor">
-     <form action="/crea tu cuenta" method="post">
+    <header>
+        <div class="horizon">
+        <div class="logo"><img src="images/logo-mercado-liebre.svg" class="logo__img">
+        </div>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar productos, marcas">
+        
+        <button class="boton"><i class="fas fa-search"></i></button>
+    </div>
+            <p class="quota"><i class="fas fa-hand-holding-usd"></i>Compra en cuotas y sin tarjeta de crédito</p>
+        </div>
+
+        <div class="horizon2">
+            <nav>
+            <ul id="top-list">
+                <li><a href="#">Ofertas</a></li>
+                <li><a href="#">Tiendas Oficiales</a></li>
+                <li><a href="#">Vender</a></li>
+                <li><a href="#">Ayuda</a></li>
+            </ul>
+            <ul>
+                <li><a href="register">Crea tu cuenta</a> <i class="far fa-address-card"></i></li>
+                <li><a href="login">Ingresa</a> <i class="fas fa-sign-in-alt"></i></li>
+                <li><a href="#">Mis compras</a> <i class="fas fa-shopping-basket"></i></li>
+            </ul>
+        </nav>
+    </div>
+        <div class="burger-menu">
+            <i class="fas fa-bars"></i>
+        </div>
+    </header>
+
+    <div class="contenedor-form">
+     <form class="formm"  action="/" method="post">
 
         <div class="nombre">
-            <input class="input-style" type="text" name="usuario" placeholder="Nombre y Apellido">
+            <input class="input-style" type="text" name="usuario" placeholder="Nombre y Apellido:">
               <span class="error-message">debes ingresar tu Nombre y Apellido</span>
           </div>
 
           <div class="nombre-usuario">
-            <input class="input-style" type="text" name="usuario" placeholder="Nombre de usuari@">
+            <input class="input-style" type="text" name="usuario" placeholder="Nombre de usuari@:">
               <span class="error-message">debes ingresar tu Nombre de usuari@</span>
           </div>
-<div>
+<div class="fecha">
 <H3>Fecha de nacimiento</H3>
-    <input type="date" name="fecha">
+    <input type="date" name="fecha"  min="1970-01-01">
 </div>
 
 
 <div class="domicilio">
-    <input class="input-style" type="text" name="domicilio" placeholder="Domicilio">
+    <input class="input-style" type="text" name="domicilio" placeholder="Domicilio:">
       <span class="error-message">debes ingresar tu Domicilio</span>
   </div>
 
 
+  <div>
+      <h3>Perfil de usuario</h3>
+      <label for="Comprador">Comprador</label>
+      <input type="radio" name="Comprador" value="Comprador">
 
-        <input type="text" name="perfil de usuario">
+      <label for="Vendedor">Vendedor</label>
+      <input type="checkbox" name="Vendedor" value="Vendedor">
 
 
-
+  </div>
 
        <div>
  <label>Categorias de interes:</label>
@@ -54,23 +93,28 @@
 </div>
 
 <div class="contraseña">
-    <input class="input-style" type="password" name="passworl" placeholder="Ingrese su contraseña"><!--  placeholder=texto de referencia -->
+    <input class="input-style" type="password" name="passworl" placeholder="Ingrese su contraseña:"><!--  placeholder=texto de referencia -->
       <span class="error-message">debes ingresar una contraseña</span>
   </div>
   
   <div class="contraseña">
-    <input class="input-style" type="password" name="passworl" placeholder="Confirmar contraceña"><!--  placeholder=texto de referencia -->
+    <input class="input-style" type="password" name="passworl" placeholder="Confirmar contraceña:"><!--  placeholder=texto de referencia -->
       <span class="error-message">debes confirmar la contraseña</span>
   </div>
 
-       
-        <input type="email" name="email">
-        <input type="tel" name="telefono">
-        <input type="number" name="edad">
-    
+   
+  <div class="email">
+    <input class="input-style" type="email" name="email" placeholder="Email:"><!--  placeholder=texto de referencia -->
+      <span class="error-message">debes ingresar tu Email</span>
+  </div>
+
+        <div class="botones">
+            <button class="boton-color" type="reset">Borrar</button>
+            <button class="boton-color" type="submit">Enviar</button>
+
+        </div>
     </form> 
 </div>
-    
     
 </body>
 </html>

@@ -16,18 +16,47 @@ main.home {
     color: var(--gris-oscuro);
 }
 
-.home .card {
+
+     /* tarjeta que esta debajo de las imagenes */
+
+ .home .card {
     background-color: white;
     margin-bottom: 10px;
-    
-
+} 
+.home .card:hover{
+    box-shadow: 3px 3px 3px 3px gray;
 }
 
-.home .card .card-content {
+
+
+.home .card .card-content{
     border-top: 1px solid var(--gris-claro);
     padding: 15px;
     position: relative;
 }
+
+/* rotacion de camion */
+/* ------------------ */
+.icon-truck i:hover {
+    animation-name: camiongirando;
+   animation-duration: 1s;
+}
+
+@keyframes camiongirando {
+    
+    0% {} 
+    
+    50% {  transform: rotate(-50deg);
+    }   
+
+    100% {   transform: rotate(-100deg);
+    }   
+}
+
+   
+
+
+
 .home .card .card-content .icon-truck i {
     color: var(--verde);
     font-size: 16px;
@@ -43,7 +72,7 @@ main.home {
     top: -15px;
 }
 
-.home .card .card-content .product-info {
+.home .card .card-content .product-info{
     display: flex;
     justify-content: space-between;
     padding-top: 5px;
@@ -59,11 +88,17 @@ main.home {
     flex-grow: 0.7;    
 }
 
-.home .card .card-content .product-name {
-    /*display: none;*/
+
+.home .card .card-content .product-name{
+    color: white;
+    
+}
+.home .card .card-content .product-name:hover{
+    
     color: var(--gris-oscuro);
     font-size: 15px;
     margin-top: 15px;
+   
 }
 
 
@@ -96,9 +131,7 @@ main.home {
      
        
        }
-       header .search-bar input {
-       
-       }
+     
     
 }
 
