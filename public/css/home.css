@@ -1,210 +1,252 @@
 
+/*header*/
+
 nav {
     display: none;
 }
-.home.banner {
-    display: none;
+
+/*banner*/
+
+.home .banner, .historial { 
+   display: none;
 }
 
+/*Main*/
+
 main.home {
+    margin: 0 auto;
     width: 90%;
-    margin: 0 auto;  
 }
+
+/*section*/
 
 .home .section-title {
     margin: 25px 0;
-    color: var(--gris-oscuro);
+    text-align: center;
 }
 
-
-     /* tarjeta que esta debajo de las imagenes */
-
- .home .card {
+.home .card {
     background-color: white;
     margin-bottom: 10px;
-} 
-.home .card:hover{
-    box-shadow: 3px 3px 3px 3px gray;
 }
 
-
-
-.home .card .card-content{
-    border-top: 1px solid var(--gris-claro);
+.home .card .card-content {
+    border-top: solid var(--light-grey);
     padding: 15px;
-    position: relative;
+    position: relative; /*al contenedor padre hay q ponerle esto primero*/
 }
 
-/* rotacion de camion */
-/* ------------------ */
-.icon-truck i:hover {
-    animation-name: camiongirando;
-   animation-duration: 1s;
+.home .card .card-content .icon-truck { /*circulo del camion*/
+    border: 1px solid var(--green);
+    border-radius: 50%;
+    width: fit-content; /*para que ese borde encierre solo el camion*/
+    padding: 5px;
+    position: absolute; /*con esto se moveria el camion, el elemento*/
+    top: -15px;
+    right: 20px;
 }
-
-@keyframes camiongirando {
-    
-    0% {} 
-    
-    50% {  transform: rotate(-50deg);
-    }   
-
-    100% {   transform: rotate(-100deg);
-    }   
-}
-
-   
-
-
 
 .home .card .card-content .icon-truck i {
-    color: var(--verde);
+    color: var(--green);
     font-size: 16px;
-    display: block;
-    padding: 5px;
-   width: fit-content;
-    width: -moz-fit-content;
-    border: 1px solid #39b54a;
-    background-color: #fff;
-    border-radius: 50%;
-    position: absolute;
-    right: 20px;
-    top: -15px;
 }
 
-.home .card .card-content .product-info{
+.home .card .card-content .product-info {
     display: flex;
-    justify-content: space-between;
+    /*justify-content: space-between; separo el precio del off en los extremos*/
     padding-top: 5px;
 }
 
-.home .card .card-content .product-info p:nth-child(1){
+.home .card .card-content .product-info p:nth-child(1) {
     flex-grow: 0.3;
+    /*flex-grow: propiedad q especifica cuánto crecerá el artículo en relación con el resto de los artículos flexibles dentro del mismo contenedor.*/
 }
 
-.home .card .card-content .product-info p:nth-child(2){
-    color: var(--verde);
+.home .card .card-content .product-info p:nth-child(2) {
+    color: var(--green);
     font-size: 14px;
-    flex-grow: 0.7;    
+    flex-grow: 0.7;
 }
 
-
-.home .card .card-content .product-name{
-    color: white;
-    
-}
-.home .card .card-content .product-name:hover{
-    
-    color: var(--gris-oscuro);
-    font-size: 15px;
+.home .card .card-content .product-name {
+    display: none;
+    color: var(--dark-grey);
     margin-top: 15px;
-   
+    font-size: 15px;
 }
 
 
-
-/* ------------------------ */
-/* Tablet*/
+/*Media queries-mobile*/
 @media (min-width: 361px) {
-    .home .card {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        display: inline-block;
-        flex-flow: row wrap;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        width: 45%;
+
+    .home .card { /*si el primer parametro es 0, tira sombra en los 4 lados*/
+        box-shadow: 0px 0px 10px rgb(100, 100, 100); /*3er parametro hace q se difumine*/
     }
 
     .home .card .card-content .product-name {
         display: block;
     }
-
-
-    header .horizon{
-        width: 100%;
-        
-       
-    }
-    header .search-bar {
-       width: 45%;
-     
-       
-       }
-     
-    
 }
 
 
-/* -------------------- */
-/* desktop */
-@media (min-width: 769px) {
-    .burger-menu {
-        display: none;
+/*Media queries-tablet*/
+@media (min-width: 768px) {
+    /*header*/
+
+   header .logo {
+       width: 250px;
+   }
+
+   .burger-menu {
+       display: none;
+   }
+
+   .home .banner, .historial { 
+       display: block; 
+    }
+
+    .home .historial {
+        font-family: var(--font-roboto);
+        text-align: center;
+        margin-top: 10px;
     }
 
     nav {
-        display: block;
+       /*display: block;*/
+       display: flex;
+       justify-content: space-between;
     }
-    .home .card {
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-        display: inline-flexbox;
-        flex-wrap: wrap;
-        justify-content: space-between;
+
+    nav ul {
+        display: flex;
+    }
+
+    nav .buttom-list ul, li, i{
+       margin: 0 6px;
+       font-size: var(--discounts-descriptions);
+    }
+
+    header .top-list {
+        display: flex;
+        justify-content: space-evenly;
         align-items: center;
-        width: 23.5%;
     }
 
+    .top-list .search-bar input{
+        width: 250px;
+        height: 24px;
+        border: none;
+    }
+
+    .top-list .search-bar input, p, i {
+        font-size: var(--discounts-descriptions);
+    }
+
+    .top-list button {
+        padding: 1px 0;
+    }
+
+    /*Productos*/
+
+    main.home section {
+        display: flex;
+        /* flex-wrap: wrap; */
+        max-width: 49%;
+        display: inline-block;
+    }
+
+    main.home section article.card {
+        margin: auto;
+        margin-top: 20px;
+        max-width: 80%;
+    }
+
+    .home .section-title {
+        display: none; 
+    }
+}
+
+
+/*Media queries-desktop (solo aqui estarán los efectos hover)*/
+@media (min-width: 1200px) {
+
+    /*header*/
     
-header .horizon{
-    width: 100%;
-    height: 120px;
-    /* display: inline; */
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    justify-content: center;
-    align-items: center;
-}
+    .logo {
+        margin-right: 80px;
+    }
 
-header button.boton{
-    height: 35px;
-    width: 35px;
-}
+    header .top-list {
+        justify-content: start; 
+    } 
 
-header .logo {
-    display: inline-block;
-    width: 30%;
+    .top-list .search-bar input{
+        width: 400px;
+    }
+
+    .top-list .quota {
+        margin-left: 50px;
+    }
+
+    /*home section*/
+
+    main.home section {
+        max-width: 24%;
+    }
+
+    main.home section article.card {
+        margin-right: 10px;
+    }
+
+    /*Hover sobre el camioncito*/
+    .home .card .card-content .icon-truck i {
+        transition: transform 500ms;
+    }
+
+    .home .card .card-content .icon-truck i:hover {
+        /*Un ángulo positivo representa un rotación en el sentido del reloj y un ángulo negativo representa una rotación en sentido contrario a las agujas del reloj.*/
+        transform: rotate(-90deg);
+    }
     
-}
-header .search-bar {
-    width: 35%;
-    display: inline-block;
-       /*margin-left: 15px;*/ 
-      
-   }
-   header .search-bar input{
-       width: 80%;
-       height: 35px;
-   }
+    /*Hover sobre la descripción del producto*/
+    .home .card .card-content .product-name {
+        /*opacity logra "transparencia" diferente a display none*/
+        opacity: 0;
+        transition: 500ms;
+    }
 
-   header p.quota {
-    text-align: center;
-    margin: 10px 0 20px;
-    font-size: 18px;
-}
+    .home .card .card-content .product-name:hover {
+        opacity: 100%;
+    }
 
-header .horizon2 nav{
-    width: 100%;
-   display: flex;
-    flex-direction: row;
-    justify-content: space-evenly; 
-}
-header .horizon2 nav a{
- margin-left: 15px;
-}
+    /*Hover-sobre la sombra del producto*/
+    .home .card { 
+        box-shadow: none; 
+        transition: box-shadow 500ms;
+    }
 
+    .home .card:hover {
+        box-shadow: 0px 0px 10px rgb(100, 100, 100); 
+    }
+
+    /*responsive footer*/
+
+    footer {
+        display: flex;
+        flex-direction: row;
+    } 
+
+    /*Hover sobre el color de los iconos dentro del footer*/
+    footer article.footer-article i {
+        transition: color 500ms;
+    }
     
+    footer article.footer-article i:hover {
+        color:  var(--green);
+    }
+
+    footer .copy { 
+        position: absolute;
+        margin-top: 150px; 
+    }
 }
-
-

@@ -1,76 +1,51 @@
-/* HEADER*/
+/*Header*/
 
 header {
-    background-color: var(--amarillo);
+    background-color: var(--yellow);
     font-size: var(--paragraph);
     padding-bottom: 10px;
-   
-    }
+}
 
-    header .horizon{
-        
-        width: 100%;
-         height: 120px;
-    }
 header .burger-menu {
-    background-color: var(--celeste);
-    color: #fff;
-    width: 25px;
-    padding: 7px;
-    border-radius: 5px;
-    text-align: center;
-    margin: 10px auto 0;
+     background-color: var(--light_blue);
+     color: white;
+     width: 25px; /*15*/
+     padding: 7px;
+     border-radius: 5px;
+     text-align:center;
+     margin: 10px auto 0; /*de arriba 10 px, auto es izq dere, y 0 hacia abajo*/
+     /*top right botton left*/
+     /* top right-left bottom */
 }
 
 header .logo {
-     display: inline-block; 
-     width: 48%; 
-     margin-top: 10px;
-     justify-content: center;
-   
-   
-   
-    
-    
-    
+     width: 130px;
+     margin-left: 25px;
+     padding-top: 20px;
+     margin-bottom: 10px;
 }
 
-/* search-bar */
+/*serch-bar*/
 
-header .search-bar {
- display: inline-block;
- width:50% ;
- 
-
-    /*margin-left: 15px;*/ 
-}
-header .search-bar input{
-    width: 75%;
-height: 30px;
-border-radius: 7px;
-border: none;
-}
-header button.boton{
-    display: inline-block;
-width: 30px;
-height: 30px;
-   
+header .top-list .form-search .search-bar {
+    display: inline-block; /*la lupa se va al lado de la barra de busqueda*/
+    margin-left: 15px;
+    border: none;
+    display: flex;
+    justify-content: center; 
 }
 
-/* Quota */
+header .top-list .form-search .search-bar button i {
+    cursor: pointer;
+}
 
 header .quota {
     text-align: center;
     margin: 10px 0 20px;
 }
 
-/* Nav */
+/*navegacion*/
 
-header nav ul#top-list {
-    margin-bottom: 25px;
+header nav ul#top-list { /*?*/
+    margin-bottom: 15px;
 }
-
-
-
-
-

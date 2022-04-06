@@ -1,20 +1,27 @@
-const express = require('express');
-let app = express();
-const PORT = 3777;
-const path = require('path')
 
+let express = require('express');
+let app = express();
+const PORT = 3000;
+let path = require('path');
+
+//middlewares
 app.use(express.static('public'));
 
-app.get('/', (req,res)=>{
-    res.sendFile(path.join(__dirname,"views/index.html"))
-})
-app.get('/register', (req,res)=>{
-    res.sendFile(path.join(__dirname,"views/register.html"))
-})
-app.get('/login', (req,res)=>{
-    res.sendFile(path.join(__dirname,"views/login.html"))
+//Routes-rutas
+app.get('/', function (req, res){
+    res.sendFile(path.join(__dirname, '/views/index.html')) //write permite varias lineas el send corta la ejecucuion de otras lineas
+    //res.write - res.end()cortamos
 })
 
-app.listen(PORT, () => console.log(`El servidor esta escuchando en el
-puerto ${PORT}
-http://localhost:${PORT}`));
+app.get('/register', function (req, res){
+    res.sendFile(path.join(__dirname, '/views/register.html')) 
+})
+
+app.get('/login', function (req, res){
+    res.sendFile(path.join(__dirname, '/views/login.html')) 
+})
+
+
+
+//Server-servidor
+app.listen(PORT, () => console.log(`Servidor escuchando en el puerto ${PORT} -> http://localhost:${PORT}`))

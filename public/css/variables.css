@@ -1,15 +1,15 @@
 :root {
-    /* colores */
-    --amarillo: #eac926;
-    --azul: #03264C;
-    --celeste: #1259c3;
-    --gris-oscuro: #666;
-    --gris-claro: #ebebeb;
-    --verde: #39b54a;
-    /* Fuentes */
-    --font-roboto: "Roboto", sans-serif;
-    --paragraph: 12px;
-    --title: 24px;
-    --prices: 18px;
-    --descounts-descriptions: 16px;
+    --yellow: #EAC926;  /* Colors-Puedo guardar el color en una variable, despues solo lo invoco*/
+    --blue: #03264C;
+    --light_blue: #1259c3;
+    --dark_grey: #666;
+    --light-grey: #ebebeb;
+    --green: #39b54a;
+    /*Font*/
+    --font-roboto:"Roboto", sans-serif;
+    /*Font sizes*/
+    --paragraph: 12px; /*parrafo o cuerpo del texto*/
+    --title: 24px; /*precios*/
+    --prices: 18px; /*precios*/
+    --discounts-descriptions: 16px;/*descuentos y descripciones*/
 }
